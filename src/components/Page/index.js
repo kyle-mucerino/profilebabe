@@ -4,7 +4,7 @@ import About from '../About';
 import Home from '../Home';
 import PhotoGallery from '../PhotoGallery';
 import SpeakingInquiries from '../SpeakingInquiries';
-import { capitlizeFirstLetter } from '../../utils/helpers';
+import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Page({ currentPage }) {
   const renderPage = () => {
@@ -24,7 +24,7 @@ function Page({ currentPage }) {
 
   return (
     <section>
-      <h2>{capitlizeFirstLetter(currentPage.name)}</h2>
+      <h2>{capitalizeFirstLetter(currentPage.name)}</h2>
       <PageContent>{renderPage()}</PageContent>
     </section>
   );

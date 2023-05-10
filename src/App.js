@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import Header from './components/Header'; 
-import Footer from './components/Footer';
-import Nav from './components/Nav';
+import { ThemeProvider } from "@mui/styles";
+import Header from "./components/Header/index";
+import Footer from "./components/Footer/index";
+import Nav from "./components/Nav/index";
+import Page from "./components/Page/index";
+import theme from "./theme"; // Import your custom theme
 
 function App() {
   const [pages] = useState([
@@ -22,19 +25,21 @@ function App() {
   const [currentPage, setCurrentPage] = useState(pages[0]);
 
   return (
-    <div>
-      <Header>
-        <Nav
-          pages={pages}
-          setCurrentPage={setCurrentPage}
-          currentPage={currentPage}
-        ></Nav>
-      </Header>
-      <main>
-        <Page currentPage={currentPage}></Page>
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Header>
+          <Nav
+            pages={pages}
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+          ></Nav>
+        </Header>
+        <main>
+          <Page currentPage={currentPage}></Page>
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
