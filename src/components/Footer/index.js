@@ -4,20 +4,20 @@ import { Typography, Box, IconButton } from "@mui/material";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import theme from '../'
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
+    backgroundColor: "#002244",
+    color: "#FFFFFF",
     padding: theme.spacing(2),
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    borderTop: "2px solid #869397",
   },
   icon: {
     margin: theme.spacing(1),
-    color: theme.palette.common.white
+    color: "#FFFFFF"
   }
 }));
 
@@ -27,8 +27,12 @@ const Footer = () => {
   return (
     <footer className={classes.footer}>
       <Box>
-        <Typography variant="body2" align="center">
-          Connect with me:
+        <Typography
+          variant="body2"
+          align="center"
+          style={{ fontSize: "30px", fontFamily: "Verdana" }}
+        >
+          Connect with Babe:
         </Typography>
         <Box display="flex" justifyContent="center">
           <IconButton
@@ -37,6 +41,7 @@ const Footer = () => {
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ color: "#FFFFFF" }}
           >
             <TwitterIcon />
           </IconButton>
@@ -46,6 +51,7 @@ const Footer = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ color: "#FFFFFF" }}
           >
             <InstagramIcon />
           </IconButton>
@@ -55,6 +61,7 @@ const Footer = () => {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ color: "#FFFFFF" }}
           >
             <FacebookIcon />
           </IconButton>

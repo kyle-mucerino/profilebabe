@@ -1,21 +1,20 @@
-import React from 'react';
-import PageContent from '../PageContent';
-import About from '../About';
-import Home from '../Home';
-import PhotoGallery from '../PhotoGallery';
-import SpeakingInquiries from '../SpeakingInquiries';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+import React from "react";
+import PageContent from "../PageContent";
+import About from "../About";
+import Home from "../Home";
+import PhotoGallery from "../PhotoGallery";
+import SpeakingInquiries from "../SpeakingInquiries";
 
 function Page({ currentPage }) {
   const renderPage = () => {
     switch (currentPage.name) {
-      case 'home':
+      case "home":
         return <Home />;
-      case 'about':
+      case "about":
         return <About />;
-      case 'photo gallery':
+      case "photo gallery":
         return <PhotoGallery />;
-      case 'speaking inquiries':
+      case "speaking inquiries":
         return <SpeakingInquiries />;
       default:
         return <Home />;
@@ -23,10 +22,10 @@ function Page({ currentPage }) {
   };
 
   return (
-    <section>
-      <h2>{capitalizeFirstLetter(currentPage.name)}</h2>
+    <div>
       <PageContent>{renderPage()}</PageContent>
-    </section>
+    </div>
   );
 }
+
 export default Page;

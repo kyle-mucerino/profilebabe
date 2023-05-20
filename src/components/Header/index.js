@@ -2,10 +2,29 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import { styled } from "@mui/system";
+import onFieldImage from "../../assets/Review3.png";
+import broadcastImage from "../../assets/Review4.png";
+import image4 from "../../assets/Review1.png";
+//import image5 from "../../assets/Review2.png";
+
+const WovenImageList = styled(Grid)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  gap: theme.spacing(2),
+  "& > *": {
+    flex: " 1 0 auto",
+    height: "100%",
+    objectFit: "contain",
+    maxWidth: "25%",
+    borderRadius: theme.spacing(1)
+  }
+}));
 
 const Header = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: "white" }}>
       <Toolbar>
         <div
           style={{
@@ -15,15 +34,22 @@ const Header = () => {
             justifyContent: "space-between"
           }}
         >
-          <div>
-            <img
-              src="./assets/dinnerGala.png"
-              alt="Dinner Gala"
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </div>
-          <Typography variant="h6" component="div">
-            Babe Laufenberg
+          <WovenImageList>
+            <img src={onFieldImage} alt="On Field" loading="lazy" />
+            <img src={broadcastImage} alt="Broadcast" loading="lazy" />
+            <img src={image4} alt="rbPic" loading="lazy" />
+          </WovenImageList>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              fontWeight: "bold",
+              fontFamily: "fantasy",
+              color: "#041E42",
+              marginLeft: "20px"
+            }}
+          >
+            From those who have worked with Babe...
           </Typography>
         </div>
       </Toolbar>

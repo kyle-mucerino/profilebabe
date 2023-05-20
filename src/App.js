@@ -4,10 +4,10 @@ import Header from "./components/Header/index";
 import Footer from "./components/Footer/index";
 import Nav from "./components/Nav/index";
 import Page from "./components/Page/index";
-import theme from "./theme"; // Import your custom theme
+import theme from "./theme";
 
 function App() {
-  const [pages] = useState([
+  const pages = [
     {
       name: "home"
     },
@@ -20,22 +20,21 @@ function App() {
     {
       name: "speaking inquiries"
     }
-  ]);
+  ];
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
 
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <Header>
+        <Header />
           <Nav
             pages={pages}
             setCurrentPage={setCurrentPage}
             currentPage={currentPage}
-          ></Nav>
-        </Header>
+          />
         <main>
-          <Page currentPage={currentPage}></Page>
+          <Page currentPage={currentPage} />
         </main>
         <Footer />
       </div>
