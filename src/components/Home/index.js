@@ -18,7 +18,7 @@ function Home() {
     >
       <Box
         sx={{
-          width: "85%",
+          width: "75%",
           padding: "10px",
           borderRadius: "15px",
           backgroundColor: "#041E42" // Dallas Cowboys navy color
@@ -46,7 +46,6 @@ function Home() {
         </Typography>
         <Typography
           variant="body1"
-          fontWeight="bold"
           component="p"
           sx={{
             fontSize: "24px",

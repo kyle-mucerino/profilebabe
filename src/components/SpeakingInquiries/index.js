@@ -25,66 +25,90 @@ function SpeakingEngagementsRequests() {
   };
 
   return (
-    <Box component="form" onSubmit={handleSubmit}>
-      <TextField
-        name="firstName"
-        label="First Name"
-        value={formState.firstName}
-        onChange={handleChange}
-        required
-      />
-      <TextField
-        name="lastName"
-        label="Last Name"
-        value={formState.lastName}
-        onChange={handleChange}
-        required
-      />
-      <TextField
-        name="title"
-        label="Title"
-        value={formState.title}
-        onChange={handleChange}
-        required
-      />
-      <TextField
-        name="organization"
-        label="Organization"
-        value={formState.organization}
-        onChange={handleChange}
-        required
-      />
-      <TextField
-        name="email"
-        label="Email"
-        type="email"
-        value={formState.email}
-        onChange={handleChange}
-        required
-      />
-      <TextField
-        name="phone"
-        label="Phone"
-        value={formState.phone}
-        onChange={handleChange}
-        required
-      />
-      <TextField
-        name="inquiryType"
-        label="I'm inquiring about"
-        value={formState.inquiryType}
-        onChange={handleChange}
-        required
-      />
-      <TextField
-        name="message"
-        label="Your message"
-        multiline
-        rows={4}
-        value={formState.message}
-        onChange={handleChange}
-        required
-      />
+    <Box
+      component="form"
+      onSubmit={handleSubmit}
+      style={{
+        marginBottom: "1rem",
+        marginTop: "1rem",
+        marginLeft: "2rem"
+      }}
+    >
+      <Box sx={{ marginBottom: "1rem", display: "flex", gap: "1rem" }}>
+        <TextField
+          name="firstName"
+          label="First Name"
+          value={formState.firstName}
+          onChange={handleChange}
+          required
+          style={{ width: "300px" }}
+        />
+        <TextField
+          name="lastName"
+          label="Last Name"
+          value={formState.lastName}
+          onChange={handleChange}
+          required
+          style={{ width: "300px" }}
+        />
+      </Box>
+      <Box sx={{ marginBottom: "1rem", display: "flex", gap: "1rem" }}>
+        <TextField
+          name="title"
+          label="Title"
+          value={formState.title}
+          onChange={handleChange}
+          required
+          style={{ width: "300px" }}
+        />
+        <TextField
+          name="organization"
+          label="Organization"
+          value={formState.organization}
+          onChange={handleChange}
+          required
+          style={{ width: "300px" }}
+        />
+      </Box>
+      <Box sx={{ marginBottom: "1rem", display: "flex", gap: "1rem" }}>
+        <TextField
+          name="email"
+          label="Email"
+          type="email"
+          value={formState.email}
+          onChange={handleChange}
+          required
+          style={{ width: "300px" }}
+        />
+        <TextField
+          name="phone"
+          label="Phone"
+          value={formState.phone}
+          onChange={handleChange}
+          required
+          style={{ width: "300px" }}
+        />
+      </Box>
+      <Box sx={{ marginBottom: "1rem", display: "flex", gap: "1rem" }}>
+        <TextField
+          name="inquiryType"
+          label="I'm inquiring about"
+          value={formState.inquiryType}
+          onChange={handleChange}
+          required
+          style={{ width: "300px" }}
+        />
+        <TextField
+          name="message"
+          label="Your message"
+          multiline
+          rows={5}
+          value={formState.message}
+          onChange={handleChange}
+          required
+          style={{ width: "400px" }}
+        />
+      </Box>
       <Button type="submit" variant="contained" color="primary">
         Submit your inquiry
       </Button>

@@ -4,8 +4,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/system";
-import onFieldImage from "../../assets/Review3.png";
-import broadcastImage from "../../assets/Review4.png";
+import onFieldImage from "../../assets/Review7.png";
+import broadcastImage from "../../assets/Review6.png";
 import image4 from "../../assets/Review1.png";
 //import image5 from "../../assets/Review2.png";
 
